@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+   <head>
+      <title>davLabs</title>
+      <link href="https://bootswatch.com/4/flatly/bootstrap.css" rel="stylesheet">
+      <style>
+       .dropdown {
+         position: relative;
+         display: inline-block;
+         color: white;
+         margin-top:8px;
+       }
+       
+       .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         min-width: 160px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         padding: 12px 16px;
+         z-index: 1;
+         color: #18BC9C;
+       }
+
+       .dropdown:hover .dropdown-content {
+         display: block;
+       }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+         <img src="https://i.pinimg.com/originals/a7/4f/5d/a74f5d6648a5ee73a4e4d89fee9d9aa1.jpg" alt="davLabs" height="30" style="padding: 5px 0 5px 0;"/>
+         <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item {{ info.index_active }}"><a class="nav-link" href="/">home</a></li>
+		<li class="nav-item {{ info.jackpotax_active }}"><a class="nav-link" href="/jackpotax">jackpotax</a></li>
+		<li class="nav-item {{ info.rate_active }}"><a class="nav-link" href="/rate">rate</a></li>
+		<li class="nav-item {{ info.countdown_active }}"><a class="nav-link" href="/countdown">countdown</a></li>
+
+		<li class="nav-item" style="color:white;margin-top:8px;"> | </li>
+
+                <li class="nav-item">
+                <div class="dropdown">
+                  <span> &nbsp; TOOLS</span>
+                  <div class="dropdown-content">
+                      <a class="nav-link" style="color:#18BC9C" href="/one">one</a>
+                      <a class="nav-link" style="color:#18BC9C" href="/two">two</a>
+                      <a class="nav-link" style="color:#18BC9C" href="/three">three</a>
+                  </div>
+                </div>
+                </li>
+
+	      </ul>
+	    <h4 style="color:white;">{{ info.version }}</h4>
+         </div>
+      </nav>
+	  <div id="content">{% block content %}{% endblock %}</div>
+   </body>	  
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+<br>
+	<div class="row">
+
+		<div class="col-lg-5">
+			<div class="card text-white bg-danger mb-3">
+			  <div class="card-header">Image One</div>
+			  <div class="card-body">
+				  <h4 class="card-title">votes img1: {{ rate.two }} </h4>
+				<img src="https://i.pinimg.com/originals/ea/bc/1f/eabc1f1e9cc133491f40b8a6634fa285.jpg">
+				<p class="card-text">votes: {{ rate.one }}</p>
+			  </div>
+			</div>
+		</div>
+
+		<div class="col-lg-2">
+			
+		</div>
+
+		<div class="col-lg-5">
+			<div class="card text-white bg-danger mb-3">
+			  <div class="card-header">Header</div>
+			  <div class="card-body">
+				  <h4 class="card-title">votes img2: {{rate.two}} </h4>
+				<img src="https://i.pinimg.com/originals/1c/5b/91/1c5b910008409ced6ab2c094b03066e8.jpg">
+				<p class="card-text"><a href='/<button type="button" class="btn btn-primary">Vote</button></p>
+			  </div>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>
+
+{% endblock %}
